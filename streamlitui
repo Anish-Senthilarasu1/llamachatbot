@@ -1,0 +1,13 @@
+import streamlit as st
+import requests
+
+st.title('Senthy AI')
+
+prompt = st.chat_input('Enter Prompt')
+
+url = f"#this is where you use the local address of your ip and the port, port 8000 is where i put my llama3 fast api/{prompt}"
+
+result = requests.get(url)
+
+
+st.markdown(result.text)
